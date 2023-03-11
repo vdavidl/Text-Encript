@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Ecriptar - Desencriptar</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+      integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <img class="Logo" src="img/Logo.png" style="width: 15%;">
+      <a class="Information" href="https://www.utp.edu.pe/" style="color: black; text-decoration: none;">Otra información</a>
+    </header>
+    <main class="main">
+      <h1 class="title">Encriptación</h1>
+      <div class="form">
+        <textarea
+          class="input-message"
+          id="message"
+          name="message"
+          cols="30"
+          rows="10"
+          placeholder="Escribe tu texto aquí..."
+        ></textarea>
+        <div class="buttons">
+          <input
+            class="button button-encrypt"
+            id="button-encrypt"
+            type="submit"
+            value="Encriptar"
+          />
+          <input
+            class="button button-decrypt"
+            id="button-decrypt"
+            type="submit"
+            value="Desencriptar"
+          />
+        </div>
+        <div class="result">
+          <input
+            class="input-result"
+            type="text"
+            id="result"
+            name="result"
+            readonly
+          />
+          <button class="button-copy" id="button-copy">
+            <img src="./assets/icon-copy.svg" alt="Copiar text" />
+          </button>
+        </div>
+      </div>
+    </main>
+    <div id="alert" class="toast-alert">
+      <p>Texto Copiado</p>
+      <img src="./assets/icon-check.svg" alt="Texto copiado" />
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
